@@ -1,0 +1,22 @@
+.imagenFichaPartidoEquipo1{
+    width: 16rem;
+    mask-image: linear-gradient(to right, #000 60%, transparent 80%);
+    -webkit-mask-image: linear-gradient(to right, #000 60%, transparent 80%);
+    filter: invert(50%) sepia(38%) saturate(4587%) hue-rotate(188deg) brightness(104%) contrast(107%);
+}
+
+.imagenFichaPartidoEquipo2{
+    width: 16rem;
+    mask-image: linear-gradient(to left, #000 60%, transparent 80%);
+    -webkit-mask-image: linear-gradient(to left, #000 60%, transparent 80%);
+    filter: invert(50%) sepia(16%) saturate(3000%) hue-rotate(317deg) brightness(113%) contrast(90%);
+}
+
+.championImagen1{
+    height: 100%;
+    width: 10rem;
+    mask-image: linear-gradient(to right, #000 60%, transparent 80%);
+    background-size: cover;
+    object-fit: cover;
+    object-position: top;
+}
