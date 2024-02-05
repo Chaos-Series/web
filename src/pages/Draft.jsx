@@ -102,17 +102,17 @@ export default function Draft() {
                     <div className="relative w-[152px] h-[152px]">
                       <img
                         src={
-                          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/profile-icons/" + jugador.info.icono + ".jpg"
+                          "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/profile-icons/" + jugador.user.icono + ".jpg"
                         }
                         className="w-full h-full rounded-[10px]"
                         alt="Icono Usuario"
                       />
-                      <p className="absolute bottom-0 left-0 w-full text-center font-[700] text-3xl drop-shadow-2xl">{jugador.info.id_usuario}</p>
+                      <p className="absolute bottom-0 left-0 w-full text-center font-[700] text-3xl drop-shadow-2xl">{jugador.user.id_usuario}</p>
                     </div>
                     <div className="md:hidden flex flex-col justify-center items-start">
-                      <span className="text-2xl font-[700]">{jugador.info.nombre_usuario}</span>
-                      <span className="text-2xl font-[700] text-[var(--color-principal)]">{"'" + jugador.info.nick_usuario + "'"}</span>
-                      <span className="text-2xl font-[700]">{jugador.info.apellido_usuario}</span>
+                      <span className="text-2xl font-[700]">{jugador.user.nombre_usuario}</span>
+                      <span className="text-2xl font-[700] text-[var(--color-principal)]">{"'" + jugador.user.nick_usuario + "'"}</span>
+                      <span className="text-2xl font-[700]">{jugador.user.apellido_usuario}</span>
                       <div className="flex flex-col justify-between">
                         <div>
                           <div className="flex justify-start items-center gap-2">
@@ -137,9 +137,9 @@ export default function Draft() {
                   </div>
                   <div className="hidden md:flex flex-col md:justify-between justify-center md:items-stretch items-center md:w-[45%] w-full">
                     <p className="text-2xl font-[700]">
-                      {" " + jugador.info.nombre_usuario + " '"}
-                      <span className="text-[var(--color-principal)]">{jugador.info.nick_usuario}</span>
-                      {"' " + jugador.info.apellido_usuario + ""}
+                      {" " + jugador.user.nombre_usuario + " '"}
+                      <span className="text-[var(--color-principal)]">{jugador.user.nick_usuario}</span>
+                      {"' " + jugador.user.apellido_usuario + ""}
                     </p>
                     <div className="flex flex-col justify-between">
                       {/* <div className="flex">
@@ -167,16 +167,16 @@ export default function Draft() {
                     </div>
                   </div>
                   <div className="flex md:flex-col md:justify-start md:items-end justify-center md:w-[20%] w-full md:gap-2 gap-4 mt-4 mb-2">
-                    <Tooltip content={quitarArroba(jugador.info.discord)} className="w-auto" placement="left">
+                    <Tooltip content={quitarArroba(jugador.user.discord)} className="w-auto" placement="left">
                       <img src={DiscordIcon} alt="Discord" className="w-[1.5rem] h-[1.5rem]" />
                     </Tooltip>
                     <Link to={listaOPGG} target="_blank">
                       <img src={OPGGIcon} alt="OPGG" className="w-[1.5rem] h-[1.5rem]" />
                     </Link>
-                    <Link to={"https://circuitotormenta.com/user/" + quitarArroba(jugador.info.circuitotormenta)} target="_blank">
+                    <Link to={"https://circuitotormenta.com/user/" + quitarArroba(jugador.user.circuitotormenta)} target="_blank">
                       <img src={CTIcon} alt="CT" className="w-[1.5rem] h-[1.5rem]" />
                     </Link>
-                    <Link to={"https://twitter.com/" + quitarArroba(jugador.info.twitter)} target="_blank">
+                    <Link to={"https://twitter.com/" + quitarArroba(jugador.user.twitter)} target="_blank">
                       <img src={TwitterIcon} alt="Twitter" className="w-[1.5rem] h-[1.5rem]" />
                     </Link>
                   </div>
