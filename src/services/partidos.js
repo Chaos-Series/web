@@ -3,7 +3,7 @@ import api from "../../variables.json";
 
 async function conseguirPartidos() {
     try {
-        const respuesta = await axios.get(api.directorio + "partidos");
+        const respuesta = await axios.get(api.directorio + "v2/partidos");
         return respuesta.data;
     } catch (e) {
         console.log(e);
