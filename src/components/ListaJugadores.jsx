@@ -1,6 +1,17 @@
-import { conseguirJugadores } from "../services/usuarios";
+import conseguirJugadores from "../services/usuarios";
 
 export default function ListaJugadores({ conseguirJugadores }){
+
+  const [jugadores, setJugadores] = useState();
+  const [cargando, setCargando] = useState(true);
+
+  useEffect(() => {
+    conseguirJugadores().then((listaJugadores) => {
+      setJugadores(listaJugadores.result);
+      setCargando(false);
+    });
+  }, []);
+  
     return (
         <MainLayoutInfo texto={"Draft"}>
       <div className="flex flex-wrap justify-center items-center m-4 gap-4">

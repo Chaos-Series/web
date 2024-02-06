@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Tooltip, Spinner } from "@nextui-org/react";
 import { Link } from "react-router-dom";
 
-import { conseguirJugadores } from "../services/usuarios";
+import conseguirJugadores from "../services/usuarios";
 import quitarArroba from "../utils/quitarArroba";
 import ListaJugadores from "../components/ListaJugadores";
 import BackgroundTarjeta from "../assets/backgrounds/FondoTarjeta.jpg";
